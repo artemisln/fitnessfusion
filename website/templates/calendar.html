@@ -1,0 +1,28 @@
+{% extends "base.html" %} {% block title %}FitnessFusion • Calendar{% endblock %}
+
+{% block content %}
+<div class="all-con cal" align="center">
+    <h1 class="gm">Your workout progress this week!</h1>
+    <div class="day-container days">
+        <div class="day-box">Monday</div>
+        <div class="day-box">Tuesday</div>
+        <div class="day-box">Wednesday</div>
+        <div class="day-box">Thursday</div>
+        <div class="day-box">Friday</div>
+        <div class="day-box">Saturday</div>
+        <div class="day-box">Sunday</div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="day-container">
+        <div class="{% if workout_class == 'worked-out' and day_of_week == 'Monday' %}green{% else %}grey-box{% endif %}"></div>
+        <div class="{% if workout_class == 'worked-out' and day_of_week == 'Tuesday' %}green{% else %}grey-box{% endif %}"></div>
+        <div class="{% if workout_class == 'worked-out' and day_of_week == 'Wednesday' %}green{% else %}grey-box{% endif %}"></div>
+        <div class="{% if workout_class == 'worked-out' and day_of_week == 'Thursday' %}green{% else %}grey-box{% endif %}"></div>
+        <div class="{% if workout_class == 'worked-out' and day_of_week == 'Friday' %}green{% else %}grey-box{% endif %}"></div>
+        <div class="{% if workout_class == 'worked-out' and day_of_week == 'Saturday' %}green{% else %}grey-box{% endif %}"></div>
+        <div class="{% if workout_class == 'worked-out' and day_of_week == 'Sunday' %}green{% else %}grey-box{% endif %}"></div>
+    </div>
+</div>
+{% endblock %}

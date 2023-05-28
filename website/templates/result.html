@@ -1,0 +1,79 @@
+{% extends "base.html" %} {% block title %}FitnessFusion • BMI Results{% endblock %}
+
+{% block content %}
+<div class="all-con">
+<div class="container">
+    <!-- <h2>BMI Result</h2> -->
+    <h3 id="bmih" align="center" class="gm">Your BMI is: {{ bmi }}</h3>
+    {% if bmi < 18.5 %}
+        <div class="res-div">
+            <p align="center">You are currently underweight.</p>
+            <h3>Suggestions to gain weight healthily</h3>
+            <p>Gaining weight healthily is important to ensure you are providing your body with the necessary nutrients and building muscle mass. Here are some suggestions:</p>
+            
+            <p>&bull; Increase your calorie intake: Consume nutrient-dense foods that are rich in calories, such as whole grains, lean proteins, healthy fats, and plenty of fruits and vegetables.</p>
+            
+            <p>&bull; Eat frequent and balanced meals: Aim to have three main meals and snacks in between. Include a balance of carbohydrates, proteins, and fats in each meal to provide a variety of nutrients.</p>
+            
+            <p>&bull; Choose protein-rich foods: Include lean meats, poultry, fish, eggs, legumes, and dairy products in your diet. These foods provide essential amino acids for muscle growth.</p>
+            
+            <p>&bull; Incorporate healthy fats: Add sources of healthy fats like avocados, nuts, seeds, and olive oil to your meals. These fats provide concentrated calories and support overall health.</p>
+            
+            <p>&bull; Strength training exercises: Include resistance exercises in your fitness routine to build muscle mass. Focus on compound movements like squats, deadlifts, and bench presses.</p>
+            
+            <p>&bull; Stay hydrated: Drink plenty of water throughout the day to support digestion, nutrient absorption, and overall health.</p>
+            
+            <p>&bull; Seek professional advice: Consult a healthcare professional or a registered dietitian for personalized guidance and support in developing a healthy weight gain plan.</p>
+            
+            <p>Remember, gaining weight healthily takes time and consistency. Listen to your body, be patient, and make sustainable lifestyle changes to achieve your goals.</p>
+
+        </div>
+        
+    {% elif bmi >= 18.5 and bmi < 25 %}
+        <div class="res-div">
+            <p align="center">You are within the normal weight range. Congratulations!</p>
+            <h3>Tips to maintain a healthy weight</h3>
+            <p>&bull; Continue with balanced meals: Keep consuming a variety of fruits, vegetables, whole grains, lean proteins, and healthy fats in your diet.</p>
+        
+            <p>&bull; Practice portion control: Maintain appropriate portion sizes and pay attention to your body's hunger and fullness cues.</p>
+            
+            <p>&bull; Stay active: Engage in regular physical activity to support overall fitness and well-being. Find activities you enjoy and make them a part of your routine.</p>
+            
+            <p>&bull; Emphasize mindful eating: Practice mindful eating by being present and enjoying your meals. Listen to your body and eat when hungry, stop when satisfied.</p>
+            
+            <p>&bull; Maintain a balanced lifestyle: Get enough sleep, manage stress levels, and prioritize self-care. These factors contribute to overall health and well-being.</p>
+            
+            <p>&bull; Regular check-ups: Visit your healthcare professional for regular check-ups and assessments of your overall health.</p>
+            
+            <p>&bull; Celebrate your achievements: Recognize and celebrate your healthy habits and achievements along the way.</p>
+            
+            <p>Remember, maintaining a healthy weight is a lifelong journey. Keep up the good work and continue prioritizing your well-being.</p>
+        </div>
+    
+        {% else %}
+        
+        <div class="res-div">
+            <p align="center">You are currently overweight.</p>
+            <h3>Suggestions to lose weight healthily</h3>
+            <p>Losing weight in a healthy way is important to support overall well-being. Here are some suggestions:</p>
+            
+            <p>&bull; Create a calorie deficit: Consume fewer calories than you burn through a combination of diet and exercise. Focus on nutrient-dense foods and portion control.</p>
+            
+            <p>&bull; Eat a balanced diet: Include a variety of fruits, vegetables, whole grains, lean proteins, and healthy fats in your meals. Limit processed foods, sugary beverages, and high-fat snacks.</p>
+            
+            <p>&bull; Practice portion control: Pay attention to portion sizes and listen to your body's hunger and fullness cues. Use smaller plates and bowls to help control portions.</p>
+            
+            <p>&bull; Engage in regular physical activity: Incorporate both cardiovascular exercises and strength training to burn calories, improve fitness, and maintain muscle mass.</p>
+            
+            <p>&bull; Stay hydrated: Drink plenty of water throughout the day to stay hydrated and support proper bodily functions. It can also help control appetite and reduce calorie intake.</p>
+            
+            <p>&bull; Practice mindful eating: Slow down during meals, savor each bite, and pay attention to your body's hunger and fullness signals. Avoid distractions while eating, such as watching TV or using electronic devices.</p>
+            
+            <p>&bull; Seek support: Consider joining a support group or working with a registered dietitian or healthcare professional to develop a personalized weight loss plan and receive guidance and accountability.</p>
+            
+            <p>Remember, healthy weight loss is a gradual process. Focus on making sustainable lifestyle changes, set realistic goals, and prioritize your overall well-being.</p>
+        </div>
+    {% endif %}
+</div>
+</div>
+{% endblock %}

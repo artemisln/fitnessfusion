@@ -1,0 +1,30 @@
+{% extends "base.html" %} {% block title %}FitnessFusion • Measurements Tracker{% endblock %}
+
+{% block content %}
+<div class="all-con">
+<h2 class="gm" align="center">Did you measure yourself today?</h2>
+
+<form class="measform" method="post" action="{{ url_for('auth.measurements') }}" class="measureform">
+    <div class="form-group">
+        <label for="bust">Bust:</label>
+        <input type="text" name="bust" id="bust"><br>
+    </div>
+    <div class="form-group">
+        <label for="waist">Waist:</label>
+        <input type="text" name="waist" id="waist"><br>
+    </div>
+    <div class="form-group">
+        <label for="hips">Hips:</label>
+        <input type="text" name="hips" id="hips"><br>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+    {% if graph_image %}
+        <img class="graph" src="data:image/png;base64,{{ image_base64 }}" alt="Graph">
+    {% else %}
+        <p align="center">No measurements available</p>
+    {% endif %}
+
+</div>
+{% endblock %}

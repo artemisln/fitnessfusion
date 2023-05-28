@@ -1,0 +1,18 @@
+{% extends "base.html" %} {% block title %}FitnessFusion • Workout Tracker{% endblock %}
+{% block content %}
+<div class="all-con worall">
+<h1 class="gm" align="center">Workout Tracker</h1>
+<p align="center">Did you workout today?</p>
+<form align="center" method="POST" action="/workout" class="worform">
+    <input type="submit" name="workout_option" value="Yes">
+    <input type="submit" name="workout_option" value="No">
+</form>
+</div>
+<!-- <h2>Workout Calendar</h2>
+<div class="workout-calendar">
+    {% for date in workout_dates %}
+        <div class="{% if workout_dates[date] %}worked-out{% else %}not-worked-out{% endif %}">{{ date }}</div>
+    {% endfor %}
+</div> -->
+
+{% endblock %}
